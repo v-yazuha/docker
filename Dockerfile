@@ -9,7 +9,7 @@ RUN wget -nc https://dl.winehq.org/wine-builds/Release.key
 
 RUN apt-key add Release.key
 
-RUN apt-get install apt-transport-https ca-certificates
+RUN apt-get update && apt-get -y install apt-transport-https curl
 
 RUN echo "deb https://dl.winehq.org/wine-builds/debian/ jessie main" | tee -a /etc/apt/sources.list
 
