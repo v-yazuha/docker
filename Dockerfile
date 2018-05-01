@@ -15,4 +15,4 @@ RUN echo "deb https://dl.winehq.org/wine-builds/debian/ jessie main" | tee -a /e
 
 RUN apt-get update 
 
-RUN apt-get install --install-recommends winehq-stable
+RUN apt-get -y install --install-recommends winehq-stable
