@@ -9,6 +9,8 @@ RUN wget -nc https://dl.winehq.org/wine-builds/Release.key
 
 RUN apt-key add Release.key
 
+RUN echo "deb https://dl.winehq.org/wine-builds/debian/ jessie main" | tee -a /etc/apt/sources.list
+
 RUN apt-get update 
 
 RUN apt-get install --install-recommends winehq-stable
