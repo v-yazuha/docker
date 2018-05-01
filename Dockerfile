@@ -5,6 +5,8 @@ RUN echo "deb http://httpredir.debian.org/debian jessie-backports main" >> /etc/
 
 RUN dpkg --add-architecture i386
 
+RUN apt-get -y install libstdc++6
+
 RUN wget -nc https://dl.winehq.org/wine-builds/Release.key
 
 RUN apt-key add Release.key
