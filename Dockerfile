@@ -5,7 +5,7 @@ RUN npm install -g electron electron-builder
 
 RUN dpkg --add-architecture i386
 
-RUN apt-get update 
+# RUN apt-get update 
 
 RUN apt-get -y install --install-recommends winehq-stable
 
