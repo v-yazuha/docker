@@ -1,11 +1,9 @@
 
-FROM node:8
+FROM electronuserland/electron-builder
 
 RUN echo "deb http://httpredir.debian.org/debian jessie-backports main" >> /etc/apt/sources.list
 
 RUN dpkg --add-architecture i386
-
-RUN apt-get -y install libstdc++6
 
 RUN wget -nc https://dl.winehq.org/wine-builds/Release.key
 
@@ -18,3 +16,6 @@ RUN echo "deb https://dl.winehq.org/wine-builds/debian/ jessie main" | tee -a /e
 RUN apt-get update 
 
 RUN apt-get -y install --install-recommends winehq-stable
+
+RUN apt-get upgrade
+RUN apt-get dist-upgrade
